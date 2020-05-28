@@ -1,6 +1,7 @@
 import homePageValidator from "./homePageValidator";
 import productPageValidator from "./productPageValidator";
 import cartPageValidator from "./cartPageValidator";
+import headerBarValidator from "./headerBarValidator";
 
 export default function validateThat() {
     return {
@@ -15,5 +16,9 @@ export default function validateThat() {
         onCartPage() {
             return cartPageValidator();
         },
+
+        onHeaderBar() {
+            return headerBarValidator();
+        }
     }
 }

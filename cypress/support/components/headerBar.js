@@ -1,16 +1,16 @@
 import homePage from "../pages/home/homePage";
 import {CART_LINK_CSS, HOME_LINK_CSS} from "./headerBarElements";
 
-export default function navigate() {
+export default function headerBar() {
     return {
-        home() {
+        clickHome() {
             cy.get(HOME_LINK_CSS)
                 .click();
 
             return homePage();
         },
 
-        cart() {
+        clickCart() {
             cy.get(CART_LINK_CSS)
                 .click();
 

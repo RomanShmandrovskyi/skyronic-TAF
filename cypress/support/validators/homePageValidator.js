@@ -20,7 +20,7 @@ export default function homePageValidator() {
                         price: product.find(PRODUCT_PRICE_CSS).text()
                     });
                 })
-                .then(() => expect(actProdArr, 'products on home page are different from expected!')
+                .then(() => expect(actProdArr, 'Products on home page are different from expected!')
                     .to.deep.eq(productsArray));
 
             return this;

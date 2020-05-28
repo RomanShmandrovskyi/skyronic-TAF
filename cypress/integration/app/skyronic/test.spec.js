@@ -1,8 +1,8 @@
-import navigate from "../../../support/components/headerBar";
+import headerBar from "../../../support/components/headerBar";
 import validateThat from "../../../support/validators/validatorFactory";
 
-import { expProdArr } from '../../../fixtures/allProducts';
-import {iPad} from "../../../fixtures/productInfo";
+import {expProdArr} from '../../../fixtures/allProducts';
+import {iPad, tShirt} from "../../../fixtures/productInfo";
 
 describe('Test suite', () => {
 
@@ -10,8 +10,8 @@ describe('Test suite', () => {
         cy.visit(Cypress.env('host'));
     });
 
-    it('Validate products', () => {
-        navigate().home();
+    it('Home page validations', () => {
+        headerBar().clickHome();
 
         validateThat().onHomePage()
             .productsCountIs(3)
@@ -19,12 +19,24 @@ describe('Test suite', () => {
             .productsAreLike(expProdArr);
     });
 
-    it('Add to cart validations', () => {
-        navigate().home()
+    it('Product page validations', () => {
+        headerBar().clickHome()
             .openProduct(iPad.title);
 
         validateThat().onProductPage()
+            .inStockValueIs(2)
+            .and()
+            .addToCartButtonExists();
+    });
 
+    it('Add to cart', function () {
+        let times = 1;
 
+        headerBar().clickHome()
+            .openProduct(tShirt.title)
+            .addToCart(times);
+
+        validateThat().onHeaderBar()
+            .itemsInCartIs(times);
     });
 })
