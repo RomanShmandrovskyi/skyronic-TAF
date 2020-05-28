@@ -8,6 +8,7 @@ export default function homePageValidator() {
 
         productsCountIs(count) {
             cy.get(PRODUCT_ELEMENT_CSS).should('have.length', count);
+
             return this;
         },
 
@@ -20,7 +21,7 @@ export default function homePageValidator() {
                         price: product.find(PRODUCT_PRICE_CSS).text()
                     });
                 })
-                .then(() => expect(actProdArr, 'Products on home page are different from expected!')
+                .then(() => expect(actProdArr)
                     .to.deep.eq(productsArray));
 
             return this;

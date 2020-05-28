@@ -6,5 +6,9 @@ module.exports = {
     tShirt: {
         title: 'H&M T-Shirt White',
         inStock: 10,
+    },
+    cd: {
+        title: 'Charli XCX - Sucker CD',
+        inStock: 5,
     }
 }
