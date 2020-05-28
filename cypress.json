@@ -1,0 +1,10 @@
+{
+  "env": {
+    "host": "https://skyronic.github.io/vue-spa"
+  },
+  "testFiles": "**/*.spec.js",
+  "fixturesFolder": false,
+  "requestTimeout": 15000,
+  "viewportWidth": 1280,
+  "viewportHeight": 720
+}
