@@ -1,3 +1,3 @@
-let cartPage = () => {
+export default function cartPage() {
 
 }
