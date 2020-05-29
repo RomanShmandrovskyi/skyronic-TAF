@@ -1,6 +1,7 @@
 {
   "env": {
-    "host": "https://skyronic.github.io/vue-spa"
+    "host": "https://skyronic.github.io/vue-spa",
+    "RETRIES": 2
   },
   "testFiles": "**/*.spec.js",
   "fixturesFolder": false,

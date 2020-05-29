@@ -22,26 +22,26 @@ describe('Skyronic test suite', () => {
     });
 
     it('Product page validations', () => {
-        let inStockCount = 2;
+        let inStock = 2;
 
         headerBar().clickHome()
             .openProduct(iPad.title);
 
         validateThat().onProductPage()
-            .inStockValueIs(inStockCount)
+            .inStockValueIs(inStock)
             .and()
             .addToCartButtonExists();
     });
 
     it('Add to cart validations', () => {
-        let times = 3;
+        let expProductCountInCart = 1;
 
         headerBar().clickHome()
             .openProduct(tShirt.title)
-            .addToCart(times);
+            .addToCart();
 
         validateThat().onHeaderBar()
-            .itemsInCartIs(times);
+            .itemsInCartIs(expProductCountInCart);
     });
 
     it('Add to cart limit validation', () => {
