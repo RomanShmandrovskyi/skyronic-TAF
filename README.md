@@ -1,6 +1,6 @@
 ## Getting started
 
-1. Clone repository to your local machine:\\
+1. Clone repository to your local machine:
 ```
 git clone https://github.com/RomanShmandrovskyi/skyronic-TAF.git
 ```
