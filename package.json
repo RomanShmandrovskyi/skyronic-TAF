@@ -11,8 +11,8 @@
   },
   "dependencies": {
     "cypress": "^4.7.0",
-    "cypress-xpath": "^1.4.0",
-    "cypress-plugin-retries": "^1.5.2"
+    "cypress-plugin-retries": "^1.5.2",
+    "cypress-xpath": "^1.4.0"
   },
   "devDependencies": {}
 }

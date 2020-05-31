@@ -5,6 +5,7 @@
   },
   "testFiles": "**/*.spec.js",
   "fixturesFolder": false,
+  "video": false,
   "requestTimeout": 15000,
   "viewportWidth": 1280,
   "viewportHeight": 720
