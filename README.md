@@ -22,7 +22,7 @@ Tests will be runned on default settings:
 - in headless mode
 
 #### B. On Chrome
-To run tests on Chrome browser just add flag `-b` (`--browser`) to command before:
+To run tests on Chrome browser just add flag `-b` (`--browser`) to command before and specify browser name:
 ```
 ./node_modules/.bin/cypress run -b chrome
 ```
@@ -39,3 +39,6 @@ To prevent the Cypress Test Runner from exiting after running tests in a spec fi
 ```
 ./node_modules/.bin/cypress run -b chrome --no-exit
 ```
+Usage of `--headless` and `--no-exit` flags at the same time no make any sense.
+
+To stop `no-exit` mode - press `Ctrl+c` shortcut  in terminal.
