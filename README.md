@@ -4,7 +4,7 @@
 ```
 git clone https://github.com/RomanShmandrovskyi/skyronic-TAF.git
 ```
-2. Load cloned repository folder and install needed node modules:
+2. Open terminal, load cloned repository folder and install needed node modules:
 ```
 cd skyronic-TAF; npm install
 ```
