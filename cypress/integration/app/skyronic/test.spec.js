@@ -54,4 +54,13 @@ describe('Skyronic test suite', () => {
             .and()
             .outOfStockButtonIsDisabled();
     });
+
+    it('Fail that in cart there are 0 products after adding', function () {
+        headerBar().clickHome()
+            .openProduct(cd.title)
+            .addToCart(2);
+
+        validateThat().onHeaderBar()
+            .itemsInCartIs(0);
+    });
 })
