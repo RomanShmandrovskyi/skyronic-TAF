@@ -42,3 +42,11 @@ To prevent the Cypress Test Runner from exiting after running tests in a spec fi
 Usage of `--headless` and `--no-exit` flags at the same time no make any sense.
 
 To stop `no-exit` mode - press `Ctrl+c` shortcut  in terminal.
+
+## Testing of responsive websites
+To test the same UI in different resolutions, we need:
+1. At first, specify how different it is on different devices (tablets, leptops, phones). 
+2. Investigate how much DOM tree will be transformed, after screen rosolution will be changed:
+   - DOM tree is the same, but in some way using JS on frontend was changed: one columns -> two columns, images resolution was reduced, like a size of text. In this way will be OK to use the same TAF for testing without any changes (it is possible to use some additional methods to scroll to some elements, like `scrollIntoView()`, and so on);
+   - DOM tree is the same but with some rerendered components like: hide nav bar to burger menu, hide left menu to a single column and so on. It still will be OK to use the same TAF, but must add some new component objects to represent them on minimised screen resolution;
+   - DOM tree is fully different and stored on separated host (like `someService.com` -> `m.someService.com`). In this case the best practice will be to create a fully new TAF to provide testing on lower resolution.
